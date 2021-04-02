@@ -39,11 +39,11 @@ Card.Title = function CardTitle({ children, ...restProps }) {
     return <Title { ...restProps}>{children}</Title>;
 };
 
-Card.SubTitle = function CardSubTitle([ children, ...restProps ]) {
+Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
     return <SubTitle { ...restProps}>{children}</SubTitle>;
 };
 
-Card.Text = function CardText([ children, ...restProps ]) {
+Card.Text = function CardText({ children, ...restProps }) {
     return <Text { ...restProps}>{children}</Text>;
 };
 
@@ -51,11 +51,11 @@ Card.Entities = function CardEntities({ children, ...restProps }) {
     return <Entities {...restProps}>{children}</Entities>;
 };  
 
-Card.Meta = function CardMeta([ children, ...restProps ]) {
+Card.Meta = function CardMeta({ children, ...restProps }) {
     return <Meta { ...restProps}>{children}</Meta>;
 };
 
-Card.Feature = function CardFeature([ children, category, ...restProps ]) {
+Card.Feature = function CardFeature({ children, category, ...restProps }) {
     const { showFeature, itemFeature, setShowFeature } = useContext(FeatureContext);
 
     return showFeature ? (
@@ -82,7 +82,7 @@ Card.Feature = function CardFeature([ children, category, ...restProps ]) {
     ) : null;
 };
 
-Card.Item = function CardItem([ item, children, ...restProps ]) {
+Card.Item = function CardItem({ item, children, ...restProps }) {
     const { setShowFeature, setItemFeature } = useContext(FeatureContext);
 
     return (
