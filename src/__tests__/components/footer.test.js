@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { Footer } from "../../components";
-import { Item } from "../../components/jumbotron/styles/jumbotron";
 
 describe("<Footer />", () => {
     it("renders the <Footer /> with populated data", () => {
