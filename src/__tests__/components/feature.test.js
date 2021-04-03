@@ -27,4 +27,16 @@ describe("<Feature />", () => {
         expect(queryByText("Watch anywhere, Cancel at anytime.")).toBeFalsy();
         expect(container.firstChild).toMatchSnapshot();
     });
+
+    it("renders the <Feature /> with just a subtitle", () => {
+        const { container, queryByText, getByText } = render(
+            <Feature>
+                <Feature.SubTitle>Watch anywhere. Cancel at anytime.</Feature.SubTitle>
+            </Feature>
+        );
+
+        expect(queryByText("Unlimited films, TV programms and more.")).toBeFalsy();
+        expect(getByText("Watch anywhere. Cancel at anytime.")).toBeTruthy();
+        expect(container.firstChild).toMatchSnapshot();
+    });
 });
