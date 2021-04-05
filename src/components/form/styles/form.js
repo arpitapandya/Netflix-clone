@@ -52,7 +52,7 @@ export const TextSmall = styled.p`
 `;
 
 export const Link = styled(ReactRouterLink)`
-    color: white;
+    color: #fff;
     text-decoration: none;
 
     & hover {

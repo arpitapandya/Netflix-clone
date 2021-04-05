@@ -4,7 +4,8 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 export const Background = styled.div`
     display: flex;
     flex-direction: column;
-    background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover no-repeat
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
+    no-repeat;
 
 @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => 
@@ -20,7 +21,7 @@ export const Group = styled.div`
 export const Container = styled.div`
     display: flex;
     margin: 0 56px;
-    height: 64px;
+    height: 100px;
     padding: 18px 0;
     justify-content: space-between;
     align-items: center;
@@ -79,13 +80,17 @@ export const Dropdown = styled.div`
             margin-bottom:0;
         }
 
-        ${Link}, ${Picture} {
+        ${Link} {
+            cursor: pointer;
+        } 
+
+        ${Picture} {
             cursor: default;
         }
     }
 
     button {
-        margin-right:
+        margin-right: 10px;
     }
 
     p {
@@ -113,6 +118,13 @@ export const SearchIcon = styled.button`
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    outline: 0;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
         filter: brightness(0) invert(1);
@@ -130,9 +142,9 @@ export const PlayButton = styled.button`
     border-radius: 5px;
     max-width: 130px;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.5s ease;
 
     &:hover {
         background-color: #ff1ele;
@@ -141,7 +153,7 @@ export const PlayButton = styled.button`
 `;
 
 export const SearchInput = styled.input`
-    background-color: #44444459;
+    background-color: rgba(64, 64, 64, 0.5);
     color: white;
     border: 1px solid white;
     transition: width 0.5s;
@@ -170,8 +182,8 @@ export const Profile = styled.div`
 `;
 
 export const Logo = styled.img`
-    height: 32px;
-    width: 108px;
+    height: 36px;
+    width: 134px;
     margin-right: 40px;
 
     @media (min-width: 1449px) {
@@ -192,7 +204,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     padding: 8px 17px;
     cursor: pointer;
     text-decoration: none;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 
     &:hover {
         background-color: #f40612;
@@ -215,7 +227,7 @@ export const Text = styled.p`
     font-size: 22px;
     line-height: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-    margin: 0;
+    // margin: 0;
 `;
 
 export const FeatureCallOut = styled.h2`
@@ -225,5 +237,5 @@ export const FeatureCallOut = styled.h2`
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     margin: 0;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 `;
