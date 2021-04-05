@@ -11,10 +11,10 @@ describe("<Accordion />", () => {
             <Accordion.Frame>
                 {faqsData.map((item) => (
             <Accordion.Item key={item.id}>
-              <Accordion.Header>{item.header}</Accordion.Header>
-              <Accordion.Body>{item.body}</Accordion.Body>
+            <Accordion.Header>{item.header}</Accordion.Header>
+            <Accordion.Body>{item.body}</Accordion.Body>
             </Accordion.Item>
-          ))}
+        ))}
         </Accordion.Frame>
         </Accordion>
         );
@@ -30,17 +30,17 @@ describe("<Accordion />", () => {
 
     it('opens and closes the <Accordion /> component', () => {
         const { container, queryByText } = render(
-          <Accordion>
+        <Accordion>
             <Accordion.Title>Frequently Asked Questions</Accordion.Title>
             <Accordion.Frame>
-              {faqsData.map((item) => (
+            {faqsData.map((item) => (
                 <Accordion.Item key={item.id}>
-                  <Accordion.Header>{item.header}</Accordion.Header>
-                  <Accordion.Body data-testid="accordion-body">{item.body}</Accordion.Body>
+                <Accordion.Header>{item.header}</Accordion.Header>
+                <Accordion.Body data-testid="accordion-body">{item.body}</Accordion.Body>
                 </Accordion.Item>
-              ))}
+            ))}
             </Accordion.Frame>
-          </Accordion>
+        </Accordion>
         );
 
     const whatIsNetflixBodyText =
@@ -53,5 +53,5 @@ describe("<Accordion />", () => {
     fireEvent.click(queryByText('What is Netflix?'));
     expect(queryByText(whatIsNetflixBodyText)).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
-  });
+});
 });
