@@ -23,3 +23,7 @@ Compound components used for design pattern to build the components. The styling
 - Fuse.js for live search,
 - Tested all the components using React Testing Library.
 - React router for navigation.
+
+[
+<img width="1520" alt="netflix-preview (1)" src="https://user-images.githubusercontent.com/66761308/113623216-0ade4b80-962c-11eb-9d3f-f8a8859fedb5.png">
+](url)
