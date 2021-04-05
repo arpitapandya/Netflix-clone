@@ -18,7 +18,7 @@ Compound components used for design pattern to build the components. The styling
 
 ### More of what I learned
 
-- React useEffect, useState, useContext
+- React hooks (useEffect, useState, useContext)
 - JavaScript using higher order functions such as map, filter, reduce, and find.
 - Fuse.js for live search,
 - Tested all the components using React Testing Library.
