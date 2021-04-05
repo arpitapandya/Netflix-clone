@@ -18,7 +18,7 @@ export default function Home() {
                         Watch anywhere, cancel at any time.
                     </Feature.SubTitle>
                     <OptForm>
-                    <OptForm.Input placeholder="Email address" />
+                    <OptForm.Input placeholder="Email Address" />
                     <OptForm.Button>Try it now</OptForm.Button>
                     <OptForm.Break />
                     <OptForm.Text>

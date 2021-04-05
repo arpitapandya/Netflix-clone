@@ -90,7 +90,7 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
         onClick={() => {
         setItemFeature(item);
         setShowFeature(true);
-    }} 
+    }}
     { ...restProps}
     >
         {children}
